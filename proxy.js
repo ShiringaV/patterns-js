@@ -60,5 +60,4 @@ const proxyFetch = new Proxy(networkFetch, {
 
 console.log(proxyFetch('https://avada-media.ua/'));
 console.log(proxyFetch('https://avada-newmedia.ua/'));
-console.log(proxyFetch('https://avada-newmedia.ua/'));
 console.log(proxyFetch('https://avada-media.ua/'));
