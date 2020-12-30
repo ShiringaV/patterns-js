@@ -1,8 +1,8 @@
 class Candy {
 
-    constructor(name, ccal, descriptions){
+    constructor(name, calories, descriptions){
         this.name = name;
-        this.ccal = ccal;
+        this.calories = calories;
         this.descriptions = descriptions;
     }
 }

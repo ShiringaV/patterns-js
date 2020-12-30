@@ -1,4 +1,5 @@
 class OfficialDealer {
+  
     constructor() {
       this.customers = [];
     }
@@ -36,10 +37,10 @@ class OfficialDealer {
 
   const mediator = new OfficialDealer();
 
-  const lala = new Customer('SomeOne', mediator);
-  const blabla = new Customer('Bla', mediator);
+  const vlad = new Customer('Vlad Shyrinha', mediator);
+  const david = new Customer('David Otson', mediator);
 
-  lala.makeOrder('Tesla', 'S 3.0');
-  blabla.makeOrder('Tesla', '1.8');
+  vlad.makeOrder('Tesla', 'S 3.0');
+  david.makeOrder('Tesla', '1.8');
   
   console.log(mediator.getCustomerList());

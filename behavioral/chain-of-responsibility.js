@@ -23,7 +23,7 @@ class Account {
 class Master extends Account {
 	constructor(balance) {
 		super();
-		this.name = 'Master Card';
+		this.name = 'MasterCard';
 		this.balance = balance;
   }
 };
@@ -36,19 +36,19 @@ class Paypal extends Account {
     }
 };
 
-class Qiwi extends Account {
+class Visa extends Account {
 	constructor(balance) {
 		super();
-		this.name = 'Qiwi';
+		this.name = 'Visa';
 		this.balance = balance;
 	}
 };
 
-const master = new Master(500);
+const visa = new Visa(500);
+const master = new Master(505);
 const paypal = new Paypal(1500);
-const qiwi = new Qiwi(500);
 
-master.setNext(qiwi);
-qiwi.setNext(paypal);
+master.setNext(visa);
+visa.setNext(paypal);
 
-master.pay(9999);
+master.pay(505);
