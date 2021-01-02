@@ -28,6 +28,7 @@ counte1.increaseCount();
 counte2.increaseCount();
 counte2.increaseCount();
 
+// Вывод в консоль
 console.log(counte1.getCount());
 console.log(counte2.getCount());
 
