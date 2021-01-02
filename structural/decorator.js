@@ -1,24 +1,23 @@
-class Server {
+class Auto {
 
-    constructor(ip, port) {
-        this.ip = ip;
-        this.port = port; 
+    constructor(name, model){
+        this.name = name;
+        this.model = model;
     }
 
-    get url() {
-        return `IP: ${this.ip}:${this.port}`;
+    get info() {
+        return `Car: ${this.name} ${this.model}`
     }
 }
 
-function aws(server) {
-    server.isAws = true;
-    server.awsInfo = function() {
-        return `${server.url} | Runs on AWS`;
+function sport(auto) {
+    auto.isNO2 = true;
+    auto.isSport = function() {
+        return `${this.name} ${this.model} is a improved car. NO2: ${auto.isNO2}`;
     }
-    return server;
+    return auto;
 }
 
-const server = aws(new Server('123.23.12.168', 8080));
+const bmw = sport(new Auto('BMW', 'X7'));
 
-console.log(server.awsInfo());
-console.log(server.isAws ? 'Amazon Web Services' : 'Does not work on AWS');
+console.log(bmw.isSport());
